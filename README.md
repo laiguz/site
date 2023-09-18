@@ -12,4 +12,5 @@
 # V 0.2
     Publicação das views de erro
     Publicação do pacote share
+    Publicação ddo config do Livewire
 
