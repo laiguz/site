@@ -7,7 +7,9 @@
     Instalação do livewire
     Instalação do pacote "https://daisyui.com/" de tailwind
     Instalação do pacote de tradução "https://github.com/lucascudo/laravel-pt-BR-localization"
+    Instalação do pacote "https://github.com/jorenvh/laravel-share"
 
 # V 0.2
     Publicação das views de erro
+    Publicação do pacote share
 
