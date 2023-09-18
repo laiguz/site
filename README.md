@@ -7,3 +7,6 @@
     Instalação do livewire
     Instalação do pacote "https://daisyui.com/" de tailwind
 
+# V 0.2
+    Publicação das views de erro
+
