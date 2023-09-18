@@ -6,6 +6,7 @@
     Instalação do jetstream
     Instalação do livewire
     Instalação do pacote "https://daisyui.com/" de tailwind
+    Instalação do pacote de tradução "https://github.com/lucascudo/laravel-pt-BR-localization"
 
 # V 0.2
     Publicação das views de erro
