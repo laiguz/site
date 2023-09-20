@@ -14,3 +14,10 @@
     Publicação do pacote share
     Publicação ddo config do Livewire
 
+# V 0.3
+    Layout
+        Estrutura da página
+    Componentes
+        Favicon
+        Logo
+
