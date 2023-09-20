@@ -1,5 +1,6 @@
 <?php
 
+use App\Livewire\Admin\Panel;
 use App\Livewire\Site\Layout\Homepage;
 use Illuminate\Support\Facades\Route;
 
@@ -14,14 +15,14 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+
 Route::get('/', Homepage::class)->name('homepage');
+
 
 Route::middleware([
     'auth:sanctum',
     config('jetstream.auth_session'),
-    'verified',
+    'verified'
 ])->group(function () {
-    Route::get('/dashboard', function () {
-        return view('dashboard');
-    })->name('dashboard');
+    Route::get('/dashboard', Panel::class)->name('dashboard');
 });

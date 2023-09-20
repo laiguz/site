@@ -17,24 +17,26 @@
         <!-- Styles -->
         @livewireStyles
     </head>
-    <body class="font-sans antialiased">
-        <x-banner />
-
+    <body class="font-sans antialiased" >
         <div class="min-h-screen bg-gray-100 dark:bg-gray-900">
-            @livewire('navigation-menu')
-
-            <!-- Page Heading -->
-            @if (isset($header))
-                <header class="bg-white dark:bg-gray-800 shadow">
-                    <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
-                        {{ $header }}
-                    </div>
-                </header>
-            @endif
-
+            @livewire('admin.navbar')
             <!-- Page Content -->
             <main>
-                {{ $slot }}
+                <div class="drawer lg:drawer-open">
+                    <input id="my-drawer-3" type="checkbox" class="drawer-toggle" />
+                    <div class="drawer-content">
+                        <!-- Page content here -->
+                        <div class="card m-3 sm:m-4 sm:p-5
+                        bg-white rounded-2xl dark:bg-gray-700
+                         shadow-xl">
+                            {{ $slot }}
+                        </div>
+                    </div>
+                    <div class="drawer-side">
+                        <label for="my-drawer-3" class="drawer-overlay"></label>
+                        @livewire('admin.side-bar')
+                    </div>
+                </div>
             </main>
         </div>
 
