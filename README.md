@@ -1,6 +1,10 @@
 <p align="center"><a href="https://github.com/laiguz" target="_blank"><img src="https://avatars.githubusercontent.com/u/138938048?v=4" width="100" alt="Laravel Logo"></a></p>
 
 ## Site básico
+
+# V 0.5 
+    Text area com CKEditor5
+    Configuração de Imagem e texto do CKEditor com Livewire
 # V 0.4 
     Layout Admin
     Upload Logo e Favicon

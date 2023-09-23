@@ -3,7 +3,9 @@
 use App\Livewire\Admin\Configuration;
 use App\Livewire\Admin\Panel;
 use App\Livewire\Site\Layout\Homepage;
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Storage;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,7 +21,6 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', Homepage::class)->name('homepage');
 
-
 Route::middleware([
     'auth:sanctum',
     config('jetstream.auth_session'),
@@ -27,4 +28,10 @@ Route::middleware([
 ])->group(function () {
     Route::get('/configurações-da-página', Configuration::class)->name('configuration');
     Route::get('/dashboard', Panel::class)->name('dashboard');
+
+    Route::post('/upload-editor',function(Request $request){
+        $file = $request->file('file');
+        $url = $file->store('public', 'uploads');
+        return Storage::url($url);
+    })->name('upload-editor');
 });

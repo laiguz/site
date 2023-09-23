@@ -17,7 +17,7 @@ class Configuration extends Component
     public $title;
     public $slug;
     public $acronym;
-    public $image;
+    public $about;
     public $cpf_cnpj;
     public $email;
     public $phone;
@@ -45,6 +45,7 @@ class Configuration extends Component
         $this->configs          = Configs::find(1);
         $this->id               = $this->configs->id;
         $this->title            = $this->configs->title;
+        $this->about            = $this->configs->about;
         $this->slug             = $this->configs->slug;
         $this->acronym          = $this->configs->acronym;
         $this->cpf_cnpj         = $this->configs->cpf_cnpj;
@@ -71,6 +72,7 @@ class Configuration extends Component
     {
         return view('livewire.admin.configuration');
     }
+
     public function update()
     {
         $this->rules = [
@@ -83,6 +85,7 @@ class Configuration extends Component
             'id'        => $this->id,
         ], [
             'title'             => $this->title,
+            'about'             => $this->about,
             'acronym'           => $this->acronym,
             'meta_description'  => $this->meta_description,
             'meta_tags'         => $this->meta_tags,
