@@ -1,5 +1,6 @@
 <?php
 
+use App\Livewire\Admin\Configuration;
 use App\Livewire\Admin\Panel;
 use App\Livewire\Site\Layout\Homepage;
 use Illuminate\Support\Facades\Route;
@@ -24,5 +25,6 @@ Route::middleware([
     config('jetstream.auth_session'),
     'verified'
 ])->group(function () {
+    Route::get('/configurações-da-página', Configuration::class)->name('configuration');
     Route::get('/dashboard', Panel::class)->name('dashboard');
 });

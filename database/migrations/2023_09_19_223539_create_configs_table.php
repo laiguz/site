@@ -16,7 +16,7 @@ return new class extends Migration
             $table->string('title',100)->nullable();
             $table->string('slug',100)->nullable();
             $table->string('acronym',50)->nullable();
-            $table->string('image',100)->nullable();
+            $table->string('logo_path', 2048)->nullable();
             $table->string('cpf_cnpj',100)->nullable();
             $table->string('email')->nullable();
             $table->string('phone')->nullable();

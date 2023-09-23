@@ -6,7 +6,7 @@
         <meta name="csrf-token" content="{{ csrf_token() }}">
 
         <title>{{ config('app.name', 'Laravel') }}</title>
-
+        <x-favicons></x-favicons>
         <!-- Fonts -->
         <link rel="preconnect" href="https://fonts.bunny.net">
         <link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet" />
@@ -20,15 +20,17 @@
     <body class="font-sans antialiased" >
         <div class="min-h-screen bg-gray-100 dark:bg-gray-900">
             @livewire('admin.navbar')
+
+            @livewire('message-alert')
+
             <!-- Page Content -->
             <main>
                 <div class="drawer lg:drawer-open">
                     <input id="my-drawer-3" type="checkbox" class="drawer-toggle" />
                     <div class="drawer-content">
                         <!-- Page content here -->
-                        <div class="card m-3 sm:m-4 sm:p-5
-                        bg-white rounded-2xl dark:bg-gray-700
-                         shadow-xl">
+                        <div class=" m-3 sm:m-4 sm:p-5
+                        bg-white rounded-2xl dark:bg-gray-700">
                             {{ $slot }}
                         </div>
                     </div>

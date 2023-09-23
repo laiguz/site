@@ -172,6 +172,7 @@ return [
         App\Providers\JetstreamServiceProvider::class,
 
         Jorenvh\Share\Providers\ShareServiceProvider::class,
+        Intervention\Image\ImageServiceProvider::class
     ])->toArray(),
 
     /*
@@ -189,6 +190,7 @@ return [
         // 'Example' => App\Facades\Example::class,
 
         'Share' => Jorenvh\Share\ShareFacade::class,
+        'Image' => Intervention\Image\Facades\Image::class
     ])->toArray(),
 
 ];

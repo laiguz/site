@@ -3,6 +3,7 @@
 ## Site básico
 # V 0.4 
     Layout Admin
+    Upload Logo e Favicon
 
 # V 0.3
     Layout
@@ -22,3 +23,4 @@
     Instalação do pacote "https://daisyui.com/" de tailwind
     Instalação do pacote de tradução "https://github.com/lucascudo/laravel-pt-BR-localization"
     Instalação do pacote "https://github.com/jorenvh/laravel-share"
+    Instalação do pacote "https://image.intervention.io/v2/api/encode"
