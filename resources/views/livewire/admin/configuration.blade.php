@@ -4,7 +4,7 @@
             <div class="space-y-2 col-span-full lg:col-span-1">
                 <p class="font-medium">Informações do site</p>
                 <p class="text-xs">Informe aqui todos os dados possíveis para melhorar o acesso do seu cliente.</p>
-                @livewire('admin.files-upload')
+                @livewire('admin.logo-upload-file')
             </div>
             <div class="grid grid-cols-6 gap-4 col-span-full lg:col-span-3">
                 <div class="col-span-full">

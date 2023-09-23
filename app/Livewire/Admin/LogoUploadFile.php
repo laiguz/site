@@ -9,7 +9,7 @@ use Livewire\WithFileUploads;
 use Illuminate\Support\Str;
 use Intervention\Image\Facades\Image;
 
-class FilesUpload extends Component
+class LogoUploadFile extends Component
 {
     use WithFileUploads;
 
@@ -26,7 +26,7 @@ class FilesUpload extends Component
     }
     public function render()
     {
-        return view('livewire.admin.files-upload');
+        return view('livewire.admin.logo-upload-file');
     }
     public function uploadLogo()
     {
