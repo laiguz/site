@@ -4,6 +4,7 @@
 # V 0.4 
     Layout Admin
     Upload Logo e Favicon
+    Configuração da páginas de erro
 
 # V 0.3
     Layout

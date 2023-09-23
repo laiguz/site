@@ -5,7 +5,7 @@
             <div class="h-full bg-white rounded-2xl dark:bg-gray-700 py-2">
                 <nav class="mt-5">
                     <div>
-                        <a href="{{ route('dashboard') }}"
+                        <a href="{{ route('dashboard') }}" aria-label="Ir para homepage"
                         class="flex items-center justify-start w-full px-4 py-2 my-1
                         font-thin uppercase transition-colors duration-200
                         {{ Request::is('*dashboard') ? ' bg-gradient-to-r from-white to-blue-100

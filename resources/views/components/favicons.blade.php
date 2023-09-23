@@ -1,4 +1,4 @@
-<link rel="shortcut icon" href="{{ url('storage/logos/favicons/favicon.ico') }}" />
+    <link rel="shortcut icon" href="{{ url('storage/logos/favicons/favicon.ico') }}" />
     <link rel="apple-touch-icon" sizes="57x57" href="{{ url('storage/logos/favicons/apple-icon-57x57.png') }}">
     <link rel="apple-touch-icon" sizes="60x60" href="{{ url('storage/logos/favicons/apple-icon-60x60.png') }}">
     <link rel="apple-touch-icon" sizes="72x72" href="{{ url('storage/logos/favicons/apple-icon-72x72.png') }}">
@@ -12,6 +12,6 @@
     <link rel="icon" type="image/png" sizes="32x32" href="{{ url('storage/logos/favicons/favicon-32x32.png') }}">
     <link rel="icon" type="image/png" sizes="96x96" href="{{ url('storage/logos/favicons/favicon-96x96.png') }}">
     <link rel="icon" type="image/png" sizes="192x192"  href="{{ url('storage/logos/favicons/android-icon-192x192.png') }}">
-    <link rel="manifest" href="{{ url('storage/images/manifest.json') }}">
+    <link rel="manifest" href="{{ url('favicons/manifest.json') }}">
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="msapplication-TileImage" content="{{ url('storage/logos/favicons/ms-icon-144x144.png') }}">

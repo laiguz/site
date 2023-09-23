@@ -2,6 +2,7 @@
 
 namespace App\Providers;
 
+use App\Models\Admin\Configs;
 use Illuminate\Support\ServiceProvider;
 
 class AppServiceProvider extends ServiceProvider
@@ -19,6 +20,8 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
-        //
+        $configurations = Configs::find(1);
+        // Vincule os dados de configuração como uma variável global
+        config(['app.configs' => $configurations]);
     }
 }

@@ -22,7 +22,7 @@ class FilesUpload extends Component
     {
         // $this->uploadimage = $uploadimage;
         $this->configs = Configs::find(1);
-        $this->logo = $this->configs->logo_path;
+        $this->logo = $this->configs->logo_path.'.png';
     }
     public function render()
     {
@@ -41,10 +41,10 @@ class FilesUpload extends Component
             $code = Str::uuid();
             $new_name = $code . '.' . $ext;
             $this->uploadimage->storeAs('public/logos', $new_name);
-            $this->configs->logo_path = $new_name;
+            $this->configs->logo_path = $code;
             $this->configs->save();
             // Storage::delete('public/logos/' . $this->logo);
-            $this->logo = $this->configs->logo_path;
+            $this->logo = $new_name;
 
             $this->logo('storage/logos/' . $new_name,$code );
         }
@@ -68,7 +68,7 @@ class FilesUpload extends Component
     }
 
     /**Logo e favicons */
-    public static function logo($image,$code )
+    public static function logo($image,$code)
     {
         $logoWebp = Image::make($image);
         $logoWebp->encode('webp', 95);
