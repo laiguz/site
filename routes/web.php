@@ -2,6 +2,7 @@
 
 use App\Livewire\Admin\Configuration;
 use App\Livewire\Admin\Panel;
+use App\Livewire\Admin\SocialMedia;
 use App\Livewire\Site\Layout\Homepage;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
@@ -28,6 +29,7 @@ Route::middleware([
 ])->group(function () {
     Route::get('/configurações-da-página', Configuration::class)->name('configuration');
     Route::get('/dashboard', Panel::class)->name('dashboard');
+    Route::get('/mídias-sociais', SocialMedia::class)->name('social-media');
 
     Route::post('/upload-editor',function(Request $request){
         $file = $request->file('file');

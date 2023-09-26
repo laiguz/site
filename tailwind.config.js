@@ -9,6 +9,7 @@ export default {
         './vendor/laravel/jetstream/**/*.blade.php',
         './storage/framework/views/*.php',
         './resources/views/**/*.blade.php',
+        './node_modules/flowbite/**/*.js',
     ],
 
     daisyui: {
@@ -23,5 +24,5 @@ export default {
         },
     },
 
-    plugins: [forms, typography,require("daisyui")],
+    plugins: [forms, typography,require("daisyui"),require('flowbite/plugin')],
 };
