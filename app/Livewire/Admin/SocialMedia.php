@@ -7,6 +7,7 @@ use Livewire\Component;
 use Livewire\WithPagination;
 
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Gate;
 
 class SocialMedia extends Component
 {
@@ -38,6 +39,9 @@ class SocialMedia extends Component
 
     public function render()
     {
+        if (Gate::allows('profile-user')) {
+            abort(403);
+        }
         return view('livewire.admin.social-media');
     }
     public function resetAll()

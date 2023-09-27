@@ -4,6 +4,7 @@ namespace App\Livewire\Admin;
 
 use App\Models\Admin\Configs;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Gate;
 use Livewire\Component;
 
 use Livewire\WithFileUploads;
@@ -70,6 +71,9 @@ class Configuration extends Component
     }
     public function render()
     {
+        if (Gate::allows('profile-user')) {
+            abort(403);
+        }
         return view('livewire.admin.configuration');
     }
 

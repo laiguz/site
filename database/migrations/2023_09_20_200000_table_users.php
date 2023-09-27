@@ -15,12 +15,10 @@ class TableUsers extends Migration
     {
         Schema::table('users', function (Blueprint $table) {
             $table->boolean('active')->nullable();
-            $table->unsignedBigInteger('group_id')->nullable();
+            $table->foreignId('user_groups_id')->nullable();
             $table->string('nick')->nullable();
             $table->string('updated_by',50)->nullable()->after('updated_at');
             $table->string('created_by',50)->nullable()->after('created_at');
-            /*RELACIONAMENTO*/
-            $table->foreign('group_id')->references('id')->on('user_groups')->onDelete('SET NULL');
         });
     }
 

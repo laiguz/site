@@ -3,7 +3,11 @@
 namespace App\Models;
 
 // use Illuminate\Contracts\Auth\MustVerifyEmail;
+
+use App\Models\Admin\UserGroups;
+use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Laravel\Fortify\TwoFactorAuthenticatable;
@@ -27,6 +31,8 @@ class User extends Authenticatable
         'name',
         'email',
         'password',
+        'user_groups_id',
+        'nick',
     ];
 
     /**
@@ -58,4 +64,21 @@ class User extends Authenticatable
     protected $appends = [
         'profile_photo_url',
     ];
+
+    public function getCreatedAttribute()
+    {
+        return Carbon::createFromFormat('Y-m-d H:i:s', $this->created_at)
+            ->format('d/m/Y H:i:s');
+    }
+
+    public function getUpdatedAttribute()
+    {
+        return Carbon::createFromFormat('Y-m-d H:i:s', $this->updated_at)
+            ->format('d/m/Y H:i:s');
+    }
+
+    public function group():BelongsTo
+    {
+        return $this->belongsTo(UserGroups::class,'user_groups_id','id');
+    }
 }

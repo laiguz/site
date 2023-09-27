@@ -1,6 +1,7 @@
 <?php
 
 use App\Livewire\Admin\Configuration;
+use App\Livewire\Admin\ListUser;
 use App\Livewire\Admin\Panel;
 use App\Livewire\Admin\SocialMedia;
 use App\Livewire\Site\Layout\Homepage;
@@ -27,8 +28,15 @@ Route::middleware([
     config('jetstream.auth_session'),
     'verified'
 ])->group(function () {
-    Route::get('/configurações-da-página', Configuration::class)->name('configuration');
+    Route::get('/configurações-da-página', Configuration::class)
+        ->name('configuration')
+        ->middleware('admin.access');
+
     Route::get('/dashboard', Panel::class)->name('dashboard');
+    Route::get('/usuários', ListUser::class)
+        ->name('list-users')
+        ->middleware('admin.access');
+
     Route::get('/mídias-sociais', SocialMedia::class)->name('social-media');
 
     Route::post('/upload-editor',function(Request $request){
