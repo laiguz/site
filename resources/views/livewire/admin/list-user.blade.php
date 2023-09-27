@@ -56,8 +56,9 @@
                                         {{ $user->name }}
                                     </td>
                                     <td
-                                        class="py-1.5 px-4 text-sm font-normal  text-center text-gray-500 dark:text-gray-400">
-                                        {{ $user->group->title }}
+                                        class="py-1.5 px-4 text-sm font-normal  text-center text-gray-500
+                                        dark:text-gray-400">
+                                        @livewire('admin.change-user-groups', ['user' => $user], key($user->id))
                                     </td>
                                     <td
                                         class="w-1/6 py-1.5 px-4 text-sm font-normal text-center text-gray-500 dark:text-gray-400">
