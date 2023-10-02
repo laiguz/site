@@ -128,7 +128,9 @@
                             value="{{ old('complement', $complement ?? '') }}">
                     </div>
                     <div class="col-span-full" wire:ignore>
-                        <textarea wire:model.defer="about" id="about">{{ old('about', $about ?? '') }}</textarea>
+                        <textarea wire:model.defer="about" id="about">
+                            {{ old('about', $about ?? '') }}
+                        </textarea>
                     </div>
                     <div class="flex col-span-full items-center space-x-4 mt-10 justify-end">
                         <button class="btn btn-neutral">Salvar</button>
@@ -155,6 +157,7 @@
                                         'Content-Type': 'multipart/form-data'
                                     }
                                 }).then(response => {
+                                    console.log(response.data)
                                 resolve({
                                     default: response.data
                                 })
@@ -193,7 +196,7 @@
             })
             .then(editor => {
                 editor.model.document.on('change:data', () => {
-                    @this.set('editor',editor.getData())
+                    @this.set('about',editor.getData())
                 });
             })
             .catch(error => {

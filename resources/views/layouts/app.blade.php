@@ -16,6 +16,7 @@
 
         <!-- Styles -->
         @livewireStyles
+        <style>.ck-editor__editable_inline {min-height: 400px;}</style>
     </head>
     <body class="font-sans antialiased" >
         <div class="min-h-screen bg-gray-100 dark:bg-gray-900">
@@ -46,6 +47,7 @@
 
 
         @livewireScripts
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.1/flowbite.min.js"></script>
         @yield('scripts')
 
     </body>

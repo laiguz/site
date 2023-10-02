@@ -66,7 +66,6 @@ class Configuration extends Component
         $this->state            = $this->configs->state;
         $this->complement       = $this->configs->complement;
 
-
         $this->logo             = $this->configs->logo_path;
     }
     public function render()
